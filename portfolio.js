@@ -30,7 +30,10 @@ function setLang(lang) {
   localStorage.setItem('cv-lang', lang);
 }
 
-langBtn.addEventListener('click', () => setLang(currentLang === 'en' ? 'uk' : 'en'));
+langBtn.addEventListener('click', () => {
+  setLang(currentLang === 'en' ? 'uk' : 'en');
+  if (typeof renderFilters === 'function') { renderFilters(); renderCards(); }
+});
 if (currentLang !== 'en') setLang(currentLang);
 
 /* ============================================================
@@ -1663,6 +1666,37 @@ DELIVERABLE: Signed scope summary doc`,
    CATEGORIES & FILTER
    ============================================================ */
 const categories = ['All', 'Business Analysis', 'Product', 'Discovery', 'Communication', 'Presale'];
+
+const t = {
+  en: {
+    all: 'All',
+    open: 'Open →',
+    request: 'Request →',
+    noLink: 'Available on request · <a href="index.html#contact">Contact me</a>',
+    catLabels: {
+      'All': 'All',
+      'Business Analysis': 'Business Analysis',
+      'Product': 'Product',
+      'Discovery': 'Discovery',
+      'Communication': 'Communication',
+      'Presale': 'Presale',
+    },
+  },
+  uk: {
+    all: 'Всі',
+    open: 'Відкрити →',
+    request: 'Запросити →',
+    noLink: 'За запитом · <a href="index.html#contact">Зв\'язатись</a>',
+    catLabels: {
+      'All': 'Всі',
+      'Business Analysis': 'Бізнес-аналіз',
+      'Product': 'Продукт',
+      'Discovery': 'Discovery',
+      'Communication': 'Комунікація',
+      'Presale': 'Пресейл',
+    },
+  },
+};
 const categoryColors = {
   'Business Analysis': '#6366f1',
   'Product':           '#10b981',
@@ -1680,7 +1714,7 @@ function renderFilters() {
   categories.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'pf-filter-btn' + (cat === activeFilter ? ' is-active' : '');
-    btn.textContent = cat;
+    btn.textContent = t[currentLang].catLabels[cat] || cat;
     if (cat === activeFilter) {
       btn.style.background = cat === 'All' ? '#00d97e' : (categoryColors[cat] || '#00d97e');
     }
@@ -1711,7 +1745,7 @@ function renderCards() {
       <p class="pf-card__desc">${item.desc}</p>
       <div class="pf-card__footer">
         <span class="pf-card__domain">${item.domain}</span>
-        <span class="pf-card__cta" style="color:${item.color}">${item.driveUrl ? 'Open →' : 'Request →'}</span>
+        <span class="pf-card__cta" style="color:${item.color}">${item.driveUrl ? t[currentLang].open : t[currentLang].request}</span>
       </div>
     `;
     card.addEventListener('click', () => {
@@ -1738,7 +1772,7 @@ function openModal(item) {
   modalMeta.style.color = item.color;
   modalTitle.textContent = item.title;
   preview.innerHTML = `<pre>${escapeHtml(item.preview)}</pre>`;
-  modalFooter.innerHTML = `<p class="pf-no-link">Available on request · <a href="index.html#contact">Contact me</a></p>`;
+  modalFooter.innerHTML = `<p class="pf-no-link">${t[currentLang].noLink}</p>`;
   overlay.classList.add('is-open');
   document.body.style.overflow = 'hidden';
 }
