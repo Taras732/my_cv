@@ -1665,6 +1665,53 @@ DELIVERABLE: Signed scope summary doc`,
 /* ============================================================
    CATEGORIES & FILTER
    ============================================================ */
+
+const descs_en = {
+  1:  'User Management module. Full Gherkin format: Given/When/Then, DoD, edge cases. For the technical team.',
+  2:  'Same module, non-technical format: WHO / WHAT / WHY / WHAT WE BUILD. For stakeholder presentations.',
+  3:  'Product justification: problem, market, financial projections, risks, recommendation. For C-level and investors.',
+  4:  'Responsibility matrix for Discovery and Delivery phases. 5 roles, 12 activities.',
+  5:  'Classic 2×2 stakeholder matrix. 8 roles, engagement strategy per quadrant.',
+  6:  'Traceability from business need → Epic → User Story → Test Case. Requirements coverage across the full lifecycle.',
+  7:  'Scope, roles, entry/exit criteria, test cases with steps and expected results. Closing the loop from requirements to acceptance.',
+  8:  'REST endpoints table: method, role, description, sample payload. For BA without deep technical background.',
+  9:  'Data flow diagram between systems: booking service, payment gateway, KEP provider, notifications.',
+  10: 'Requirements for qualified electronic signature integration. Scope, technical constraints, AC, compliance.',
+  11: 'Full backlog: 14 epics, 74 stories, MoSCoW + WSJF scoring, Sprint 1 scope, dependency mapping.',
+  12: 'Full PRD for the Promo Code feature: problem statement, scope, user stories, technical requirements, metrics.',
+  13: '1-page brief for Promo Code. Goal, scope, out of scope, open questions. Quick start for the team.',
+  14: 'Now/Next/Later format for team and stakeholders. No dates — focus on priorities, not deadlines.',
+  15: 'Quarterly timeline with milestones and delivery goals. For investor updates and executive presentations.',
+  16: 'Goal-based strategic roadmap. 4 themes instead of a feature list. For board-level and investor communications.',
+  17: 'Structured pain analysis from 12 interviews: clustering, frequency, severity score.',
+  18: 'JTBD map: job statement, functional / emotional / social dimensions, barriers, success criteria.',
+  19: '2×2 matrix for feature prioritisation after Discovery. 16 ideas mapped to quadrants with rationale.',
+  20: 'Consolidated Discovery phase report: methodology, key insights, opportunity areas, recommended next steps.',
+  21: 'Structured guide for a 45-min interview: intro, question blocks, probes, closing. For 2 facilitators.',
+  22: '3 personas: Urban Renter, Business Traveler, Weekend Explorer. Goals, frustrations, behaviours, quote.',
+  23: '12 slides: goals, RACI, scope, constraints, timeline, risks, communication plan, DoD. With decision log.',
+  24: 'Dev-oriented changelog: feat/fix/perf/deps with breaking changes and migration guide. Semver-ready.',
+  25: 'Business-oriented release notes: no technical jargon, with emoji, for clients and stakeholders.',
+  26: 'Real CR example using the Promo Code feature: impact assessment, scope/timeline/budget changes, sign-off.',
+  27: '3-page proposal: problem understanding, proposed approach, team, timeline, investment range.',
+  28: 'Detailed estimate by epics: story points, man-days, rate, cost. With buffer and assumptions.',
+  29: 'Rough feature sizing at XS/S/M/L/XL level for early-stage discovery. For quick scope alignment.',
+  30: 'Legal-oriented document: scope, deliverables, timeline, payment milestones, exclusions, IP rights.',
+  31: 'Comparison table of 5 competitors: features, UX, monetisation, market position. Opportunity gaps.',
+  32: '1-page executive summary: problem → solution → key features → tech stack → expected metrics.',
+  33: 'Completion criteria for sprints and user stories: code review, tests, documentation, deploy checklist.',
+  34: 'Readiness criteria for a user story to enter development: clear AC, estimate, dependencies resolved, mockups confirmed.',
+  35: 'Visual stakeholder diagram with roles, influence, connections and communication strategy per stakeholder.',
+  36: 'Blank template for formalising a change to signed scope: description, impact assessment, options, decision.',
+  37: 'Excel log of all CRs with status, impact, cost and decision. For scope creep control.',
+  38: 'Minimal set of user stories without Gherkin — for quick grooming or clients without tech background.',
+  39: 'Concise 8-slide template for project kick-off: goals, team, scope, risks, next steps.',
+  40: 'Ready-made Canva templates for BA/PO presentations: dark/light theme, branded slides, reusable layouts.',
+  41: '12 questions for the client before the first call: business context, problem, expectations, constraints.',
+  42: 'Interactive Excel calculator for the client: enter fleet size and conversion → see revenue uplift.',
+  43: 'Agenda for a 3-hour presale workshop with the client: goals, exercises, deliverables, follow-up plan.',
+};
+
 const categories = ['All', 'Business Analysis', 'Product', 'Discovery', 'Communication', 'Presale'];
 
 const t = {
@@ -1742,7 +1789,7 @@ function renderCards() {
         </div>
       </div>
       <h3 class="pf-card__title">${item.title}</h3>
-      <p class="pf-card__desc">${item.desc}</p>
+      <p class="pf-card__desc">${currentLang === 'uk' ? item.desc : (descs_en[item.id] || item.desc)}</p>
       <div class="pf-card__footer">
         <span class="pf-card__domain">${item.domain}</span>
         <span class="pf-card__cta" style="color:${item.color}">${item.driveUrl ? t[currentLang].open : t[currentLang].request}</span>
