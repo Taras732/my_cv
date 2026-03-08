@@ -1206,6 +1206,457 @@ EXPECTED OUTCOMES (12 months):
   Repeat bookings:   30% of users
   Monthly bookings:  500+ by Month 6`,
   },
+
+  /* ── BA (additional) ────────────────────────────────────── */
+  {
+    id: 33,
+    category: 'Business Analysis',
+    tag: 'DoD',
+    color: '#6366f1',
+    title: 'Definition of Done',
+    desc: 'Критерії завершеності для спринтів і user stories: code review, тести, документація, deploy checklist.',
+    domain: '🚗 Car Rental Platform',
+    format: 'DOCX',
+    driveUrl: 'https://docs.google.com/document/d/1H1VMtUTCix2I5krEboZ9TfZ65-sUpEkQ/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'Definition-of-Done.docx',
+    preview: `Definition-of-Done.docx
+─────────────────────────────────────────
+DEFINITION OF DONE — Car Rental Platform
+
+A Story is DONE when:
+  □ Code reviewed by at least 1 peer
+  □ Unit tests written (coverage ≥ 80%)
+  □ Integration tests pass (CI green)
+  □ No critical/high Sonar issues
+  □ API documentation updated (Swagger)
+  □ Deployed to staging environment
+  □ PO/BA accepted in staging
+  □ No open blocking bugs
+
+A Sprint is DONE when:
+  □ All committed stories meet Story DoD
+  □ Sprint goal achieved
+  □ Release notes draft updated
+  □ Regression suite passed
+  □ Demo held, stakeholders notified
+
+Exceptions must be documented as tech debt
+with linked Jira ticket before marking Done.`,
+  },
+  {
+    id: 34,
+    category: 'Business Analysis',
+    tag: 'DoR',
+    color: '#6366f1',
+    title: 'Definition of Ready',
+    desc: 'Критерії готовності user story до розробки: чіткі AC, оцінка, залежності знято, макети підтверджені.',
+    domain: '🚗 Car Rental Platform',
+    format: 'DOCX',
+    driveUrl: 'https://docs.google.com/document/d/1WjxhrSjpEmHRTvv_QR4emqN022NnYYPP/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'Definition-of-Ready.docx',
+    preview: `Definition-of-Ready.docx
+─────────────────────────────────────────
+DEFINITION OF READY — Car Rental Platform
+
+A Story is READY for Sprint when:
+  □ Written as: "As a [role] I want [action]
+    so that [benefit]"
+  □ Acceptance Criteria defined (≥3 AC)
+  □ Story estimated (SP agreed by team)
+  □ Dependencies identified & resolved
+  □ UI/UX mockup linked (if UI change)
+  □ API contract agreed (if API change)
+  □ No ambiguous open questions
+  □ Fits in 1 sprint (else split)
+
+EPIC is READY for Planning when:
+  □ Problem statement confirmed by PO
+  □ Business value quantified
+  □ High-level scope defined
+  □ All child stories identified
+  □ Tech approach reviewed by TL
+
+Stories not meeting DoR go back
+to refinement before sprint planning.`,
+  },
+  {
+    id: 35,
+    category: 'Business Analysis',
+    tag: 'Stakeholder Map',
+    color: '#6366f1',
+    title: 'Stakeholder Map',
+    desc: 'Візуальна схема стейкхолдерів з ролями, впливом, зв\'язками та стратегією комунікації для кожного.',
+    domain: '🚗 Car Rental Platform',
+    format: 'DOCX',
+    driveUrl: 'https://docs.google.com/document/d/1VczWsjP3NW07VOu5BX_zo_WZVmdjAAeV/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'SM-CR-003-StakeholderMap.docx',
+    preview: `SM-CR-003-StakeholderMap.docx
+─────────────────────────────────────────
+STAKEHOLDER MAP — Visual Schema
+
+HIGH INFLUENCE / HIGH INTEREST:
+  ● CEO / Founder        → Manage closely
+  ● Fleet Operations Mgr → Key collaborator
+  ● Head of IT           → Technical gatekeeper
+
+HIGH INFLUENCE / LOW INTEREST:
+  ● CFO                  → Financial sign-off
+  ● Legal Counsel        → Compliance review
+
+LOW INFLUENCE / HIGH INTEREST:
+  ● End Users (renters)  → Needs satisfaction
+  ● Rental Agents        → Change adoption
+  ● Customer Support     → Process change
+
+LOW INFLUENCE / LOW INTEREST:
+  ● Accountant           → Report consumer
+  ● Insurance Partner    → Periodic update
+
+CONNECTION MAP:
+  CEO ──> BA/PO ──> Dev Team
+  CEO ──> CFO (budget approval)
+  Fleet Ops ──> Agents (daily ops)
+  Legal ──> Payment Provider (contracts)
+
+Communication: Weekly status → CEO, CFO
+               Daily standup → Dev Team`,
+  },
+  {
+    id: 36,
+    category: 'Business Analysis',
+    tag: 'CR Template',
+    color: '#6366f1',
+    title: 'Change Request Template',
+    desc: 'Blank template для оформлення зміни до підписаного scope: опис, impact assessment, options, decision.',
+    domain: 'Universal',
+    format: 'DOCX',
+    driveUrl: 'https://docs.google.com/document/d/1KkCCK4x2ZH9c_gBTYDu80z6nJ5F6dm2b/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'CR-TEMPLATE-001-ChangeRequest-Blank.docx',
+    preview: `CR-TEMPLATE-001-ChangeRequest-Blank.docx
+─────────────────────────────────────────
+CHANGE REQUEST #[ID]
+Title:       [Short title]
+Date:        [YYYY-MM-DD]
+Requested by:[Role / Name]
+Priority:    [ ] Critical  [ ] High  [ ] Medium
+
+1. DESCRIPTION OF CHANGE:
+   [What needs to change and why]
+
+2. BUSINESS JUSTIFICATION:
+   [Why this is needed now]
+
+3. IMPACT ASSESSMENT:
+   Scope:    [+/- stories / features]
+   Timeline: [+/- weeks / delay to what]
+   Budget:   [+/- cost breakdown]
+   Risk:     [what could go wrong]
+   Mitigation: [how to handle]
+
+4. OPTIONS:
+   A) [Option A]: [cost/time impact]
+   B) [Option B]: [cost/time impact]
+   C) Defer:      [rationale]
+
+5. RECOMMENDATION: Option [X]
+
+6. SIGN-OFF:
+   PO: ___   Tech Lead: ___   Finance: ___
+   Date: ___________`,
+  },
+  {
+    id: 37,
+    category: 'Business Analysis',
+    tag: 'CR Register',
+    color: '#6366f1',
+    title: 'Change Request Register',
+    desc: 'Excel-журнал усіх CR із статусом, impact, вартістю і рішенням. Для контролю scope creep.',
+    domain: '🚗 Car Rental Platform',
+    format: 'XLSX',
+    driveUrl: 'https://docs.google.com/spreadsheets/d/1XBUZfDBoMxjW5aQau_8tZ80qWARnJAzT/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'CRR-CR-001-ChangeRequestRegister.xlsx',
+    preview: `CRR-CR-001-ChangeRequestRegister.xlsx
+─────────────────────────────────────────
+ID  │ Title               │Status  │ Cost  │Date
+─────────────────────────────────────────────────
+001 │ Promo Code System   │Approved│+$9.6K │Jan-26
+002 │ Fleet GPS Export    │Approved│+$2.1K │Jan-26
+003 │ Apple Pay Support   │Deferred│+$4.8K │Feb-26
+004 │ 3rd Party Insurance │Rejected│+$18K  │Feb-26
+005 │ Loyalty Tiers (v2)  │Pending │+$6.2K │Mar-26
+
+SUMMARY:
+  Total CRs submitted:  5
+  Approved:             2   (+$11,700)
+  Deferred:             1
+  Rejected:             1   (out of scope)
+  Pending:              1
+
+  Original budget:      $81,286
+  Approved CR delta:   +$11,700
+  Current estimate:    $92,986
+
+Notes:
+• CR-004 rejected — Insurance API deferred
+  to Phase 2 per CEO decision
+• CR-003 Apple Pay deferred to Q3 release`,
+  },
+  {
+    id: 38,
+    category: 'Business Analysis',
+    tag: 'User Stories',
+    color: '#6366f1',
+    title: 'User Stories (Minimal)',
+    desc: 'Мінімальний набір user stories без Gherkin — для швидкого grooming або клієнтів без tech background.',
+    domain: '👤 User Management',
+    format: 'DOCX',
+    driveUrl: 'https://docs.google.com/document/d/16XvYDeCoL35NMjkOWTc9AxPZjAciveqB/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'US-UM-01-Minimal.docx',
+    preview: `US-UM-01-Minimal.docx
+─────────────────────────────────────────
+USER STORIES — User Management (Minimal)
+
+US-001  Registration
+As a new user, I want to register with
+email + password so I can access the system.
+  AC: Duplicate email → error message
+  AC: Password ≥ 8 chars, 1 number required
+  AC: Confirmation email sent within 60s
+
+US-002  Login
+As a registered user, I want to log in
+so I can access my account.
+  AC: Wrong password → max 5 attempts
+  AC: "Remember me" keeps session 30 days
+
+US-003  Password Reset
+As a user who forgot my password, I want
+to reset it via email so I can regain access.
+  AC: Reset link valid for 30 minutes
+  AC: Old password invalidated immediately
+
+US-004  Profile Update
+As a logged-in user, I want to update my
+profile so my information stays current.
+  AC: Name, phone, avatar editable
+  AC: Email change requires re-verification
+
+Format: simple AC list (no Gherkin)
+Audience: business stakeholders, clients`,
+  },
+
+  /* ── COMMUNICATION (additional) ────────────────────────── */
+  {
+    id: 39,
+    category: 'Communication',
+    tag: 'Kick-off',
+    color: '#ec4899',
+    title: 'Kick-off Presentation (Short)',
+    desc: 'Стислий 8-слайдовий шаблон для project kick-off: цілі, команда, скоуп, ризики, наступні кроки.',
+    domain: '🚗 Car Rental Platform',
+    format: 'PPTX',
+    driveUrl: 'https://docs.google.com/presentation/d/184-xo3yoz5MT2PeMctQmMYYyZmKkdM_k/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'KO-CR-001-Kickoff-Short.pptx',
+    preview: `KO-CR-001-Kickoff-Short.pptx  (8 slides)
+─────────────────────────────────────────
+Slide 1: Title + Project Name + Date
+Slide 2: Why We're Here
+          Problem → Vision → Success metrics
+Slide 3: Team & Roles
+          PO · BA · TL · Dev · QA · Design
+Slide 4: Scope (In / Out of Scope)
+          MVP features vs Phase 2
+Slide 5: Timeline Overview
+          Q1: Discovery → Q2: Build → Q3: Launch
+Slide 6: Risks & Mitigations
+          Top 3 risks + owners + mitigation plans
+Slide 7: Ways of Working
+          Sprints · Daily · Review · Retro
+          Communication channels + escalation
+Slide 8: Next Steps & Action Items
+          Owner · Due date for each action
+
+Use case: project kick-off meeting
+Audience: client + delivery team
+Duration: 30-45 min with Q&A`,
+  },
+  {
+    id: 40,
+    category: 'Communication',
+    tag: 'Templates',
+    color: '#ec4899',
+    title: 'Canva Presentation Templates',
+    desc: 'Набір готових Canva-шаблонів для BA/PO презентацій: dark/light theme, branded slides, reusable layouts.',
+    domain: 'Universal',
+    format: 'Canva',
+    driveUrl: 'https://www.canva.com/design/DAHDWr02LNo/xDl0jBaBpDbGPUN-8NCuOQ/view?utm_content=DAHDWr02LNo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb8a6af1f35',
+    filename: 'Canva templates',
+    preview: `Canva Presentation Templates
+─────────────────────────────────────────
+Collection of BA/PO presentation layouts:
+
+INCLUDED TEMPLATES:
+  ✦ Project Kick-off deck (8 slides)
+  ✦ Sprint Review / Demo deck
+  ✦ Discovery Synthesis report
+  ✦ Stakeholder Status Update (1-pager)
+  ✦ Feature Brief visual layout
+  ✦ Roadmap visual (Now/Next/Later)
+
+DESIGN SYSTEM:
+  • Dark + Light theme versions
+  • Color-coded sections per artifact type
+  • Icon library for BA/PO concepts
+  • Reusable table and diagram layouts
+
+USAGE:
+  Copy template → edit content → export PDF
+  Font: Inter (same as this site)
+  Primary: #6366f1  Accent: #10b981
+
+Note: Canva link opens in browser.
+      Duplicate to your account to edit.`,
+  },
+
+  /* ── DISCOVERY (additional) ─────────────────────────────── */
+  {
+    id: 41,
+    category: 'Discovery',
+    tag: 'Questionnaire',
+    color: '#f59e0b',
+    title: 'Pre-Discovery Questionnaire',
+    desc: '12 запитань для клієнта перед першим дзвінком: бізнес-контекст, проблема, очікування, обмеження.',
+    domain: 'Universal',
+    format: 'DOCX',
+    driveUrl: 'https://docs.google.com/document/d/1a9dC5iT-vCTBojY1EySeEVWAYvBeGUau/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'PDQ-CR-001-PreDiscoveryQuestionnaire.docx',
+    preview: `PDQ-CR-001-PreDiscoveryQuestionnaire.docx
+─────────────────────────────────────────
+PRE-DISCOVERY QUESTIONNAIRE
+
+1. What does your company do?
+   (core business, revenue model, key clients)
+
+2. What problem are you trying to solve?
+   (describe the pain in plain language)
+
+3. Who experiences this problem most?
+   (role, team, frequency)
+
+4. What solutions have you tried so far?
+   (tools, workarounds, why they didn't work)
+
+5. What does success look like in 6 months?
+   (specific outcomes, not features)
+
+6. What is your estimated budget range?
+   (< $20K / $20-50K / $50-100K / $100K+)
+
+7. What is your desired timeline?
+   (hard deadline? regulatory? business driver?)
+
+8. Who will be the key decision maker?
+   (internal champion, final approver)
+
+9. What existing systems must we integrate with?
+
+10. Do you have internal tech team?
+    (will they maintain the product after launch?)
+
+11. How did you find us?
+
+12. Anything else we should know?`,
+  },
+
+  /* ── PRESALE (additional) ───────────────────────────────── */
+  {
+    id: 42,
+    category: 'Presale',
+    tag: 'ROI Calc',
+    color: '#8b5cf6',
+    title: 'ROI Calculator',
+    desc: 'Інтерактивний Excel-калькулятор для клієнта: введи fleet size і конверсію → побачиш revenue приріст.',
+    domain: '🚗 Car Rental Platform',
+    format: 'XLSX',
+    driveUrl: 'https://docs.google.com/spreadsheets/d/1Zw_KhLspLzSXnbNyA5yLdgNtbYR2IOma/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'ROIC-CR-001-ROICalculator.xlsx',
+    preview: `ROIC-CR-001-ROICalculator.xlsx
+─────────────────────────────────────────
+ROI CALCULATOR — Car Rental Platform
+
+INPUT YOUR NUMBERS:
+  Fleet size:           [50] cars
+  Current utilization:  [58] %
+  Avg. daily rate:      [$45] / car
+  Monthly bookings:     [870]
+
+PROJECTED IMPROVEMENTS:
+  Checkout time:    -85%  (47 min → 7 min)
+  Booking dropoff:  -40%  (faster UX)
+  Utilization gain: +8%   (better visibility)
+
+CALCULATED RESULTS:
+  Current monthly revenue:    $22,185
+  Projected monthly revenue:  $27,405
+  Monthly uplift:            +$5,220 (+23.5%)
+
+  Platform investment:        $82,000
+  Monthly cost savings (ops):  $1,800
+  Total monthly benefit:      +$7,020
+
+  Payback period:             ≈ 9.3 months
+  Year 1 ROI:                 +38%
+  Year 2 ROI:                 +210%
+
+[All cells in yellow are editable inputs]`,
+  },
+  {
+    id: 43,
+    category: 'Presale',
+    tag: 'Workshop',
+    color: '#8b5cf6',
+    title: 'Scoping Workshop Agenda',
+    desc: 'Agenda для 3-годинного presale workshop з клієнтом: цілі, вправи, deliverables, follow-up plan.',
+    domain: 'Universal',
+    format: 'DOCX',
+    driveUrl: 'https://docs.google.com/document/d/1IvtMtcTr69kEVDyj4nVjUwf3yjXDmnkI/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
+    filename: 'SWA-CR-001-ScopingWorkshopAgenda.docx',
+    preview: `SWA-CR-001-ScopingWorkshopAgenda.docx
+─────────────────────────────────────────
+SCOPING WORKSHOP AGENDA  (3 hours)
+Facilitator: BA/PO  |  Client: key stakeholders
+
+09:00  Welcome & Introductions  (15 min)
+       • Goals for today
+       • Ground rules
+
+09:15  Problem Space  (45 min)
+       • "As-Is" pain mapping (sticky notes)
+       • Problem statement alignment
+       • Prioritize top 3 pain points
+
+10:00  Solution Vision  (30 min)
+       • "To-Be" ideal state sketching
+       • Success metrics brainstorm
+       • Out-of-scope boundaries
+
+10:30  BREAK  (15 min)
+
+10:45  Feature Ideation  (30 min)
+       • T-shirt sizing exercise
+       • MoSCoW quick sort
+       • MVP hypothesis
+
+11:15  Risk & Constraints  (20 min)
+       • Budget / timeline / tech
+       • Assumptions parking lot
+
+11:35  Next Steps  (10 min)
+       • Deliverables: Scope doc in 3 days
+       • Follow-up call: [DATE]
+
+DELIVERABLE: Signed scope summary doc`,
+  },
 ];
 
 /* ============================================================
