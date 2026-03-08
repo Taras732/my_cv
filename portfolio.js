@@ -1734,13 +1734,19 @@ function openModal(item) {
   modalMeta.textContent = `${item.category} · ${item.domain}`;
   modalMeta.style.color = item.color;
   modalTitle.textContent = item.title;
-  preview.innerHTML = `<pre>${escapeHtml(item.preview)}</pre>`;
+  const embedUrl = getEmbedUrl(item.driveUrl);
+  if (embedUrl) {
+    preview.innerHTML = `<iframe src="${embedUrl}" class="pf-iframe" allowfullscreen loading="lazy"></iframe>`;
+  } else {
+    preview.innerHTML = `<pre>${escapeHtml(item.preview)}</pre>`;
+  }
 
   if (item.driveUrl) {
+    const isCanva = item.driveUrl.includes('canva.com');
     modalFooter.innerHTML = `
       <a href="${item.driveUrl}" target="_blank" rel="noopener"
          class="pf-btn-drive" style="background:${item.color}">
-        Open in Google Drive →
+        ${isCanva ? 'Open in Canva →' : 'Open in Google Drive →'}
       </a>`;
   } else {
     modalFooter.innerHTML = `<p class="pf-no-link">Available on request · <a href="index.html#contact">Contact me</a></p>`;
@@ -1753,6 +1759,13 @@ function openModal(item) {
 function closeModal() {
   overlay.classList.remove('is-open');
   document.body.style.overflow = '';
+}
+
+function getEmbedUrl(driveUrl) {
+  if (!driveUrl) return null;
+  const m = driveUrl.match(/https:\/\/docs\.google\.com\/(document|spreadsheets|presentation)\/d\/([^\/]+)\//);
+  if (m) return `https://docs.google.com/${m[1]}/d/${m[2]}/preview`;
+  return null;
 }
 
 function escapeHtml(str) {
