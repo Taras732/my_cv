@@ -64,7 +64,7 @@ const artifacts = [
     desc: 'User Management module. Повний формат: Given/When/Then, DoD, edge cases. Для технічної команди.',
     domain: '🚗 Car Rental / User Mgmt',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/11CmOLxk1aVCuCU4FhDfzHXoiBEvlqmI9/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'US-UM-01-UserManagement.docx',
     preview: `US-UM-01-UserManagement.docx
 ─────────────────────────────────────────
@@ -99,7 +99,7 @@ Definition of Done:
     desc: 'Той же модуль, нетехнічний формат: WHO / WHAT / WHY / WHAT WE BUILD. Для презентацій стейкхолдерам.',
     domain: '🚗 Car Rental / User Mgmt',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1kc3rbUNkeQqA5z0JHuZDSqGeLjzl4-Qf/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'US-UM-01-BusinessSummary.docx',
     preview: `US-UM-01-BusinessSummary.docx
 ─────────────────────────────────────────
@@ -131,7 +131,7 @@ WHAT WE DON'T BUILD (v1):
     desc: 'Обґрунтування продукту: проблема, ринок, фінансові проекції, ризики, recommendation. Для C-level і інвесторів.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1bVVgfJC0Q2YOgrEihvycqj05XJQrgYdv/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'BC-CR-001-BusinessCase.docx',
     preview: `BC-CR-001-BusinessCase.docx
 ─────────────────────────────────────────
@@ -166,7 +166,7 @@ RECOMMENDATION: Proceed to Discovery Phase`,
     desc: 'Матриця відповідальностей для Discovery та Delivery фаз. 5 ролей, 12 активностей.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1nyQsWodf93jzMVODLH1DglXFXpM9QC8N/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'SM-CR-002-RACI.docx',
     preview: `SM-CR-002-RACI.docx
 ─────────────────────────────────────────
@@ -193,7 +193,7 @@ C = Consulted    I = Informed`,
     desc: 'Класична 2×2 матриця стейкхолдерів. 8 ролей, стратегія взаємодії для кожного квадранту.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1KgOQ9MuTfU71l44wB4FrqGP3H6-ocl_0/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'SM-CR-001-InfluenceMatrix.docx',
     preview: `SM-CR-001-InfluenceMatrix.docx
 ─────────────────────────────────────────
@@ -225,7 +225,7 @@ preferred channels, escalation path`,
     desc: 'Зв\'язок від бізнес-потреби → Epic → User Story → Test Case. Покриття вимог по всьому lifecycle.',
     domain: '🚗 Car Rental Platform',
     format: 'XLSX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/spreadsheets/d/1QU0GRci2FbXoy_wxmHOOFqZXljzA8_Lr/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'RTM-CR-001-TraceabilityMatrix.xlsx',
     preview: `RTM-CR-001-TraceabilityMatrix.xlsx
 ─────────────────────────────────────────
@@ -255,7 +255,7 @@ audit trail, release readiness check`,
     desc: 'Scope, ролі, entry/exit criteria, test cases з кроками та expected results. Closing the loop від вимог до прийняття.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1v1Cw1YFIEeIpqCoaHQEjpJltmYuBDfd-/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'UAT-CR-001-UATplan.docx',
     preview: `UAT-CR-001-UATplan.docx
 ─────────────────────────────────────────
@@ -293,7 +293,7 @@ EXIT CRITERIA:
     desc: 'Таблиця REST endpoints: метод, роль, опис, приклад payload. Для BA без глибокого tech-background.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1_nRny7mP-iX_uYZCtZgruu8-u6ieqgzn/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'API-CR-001-Endpoints.docx',
     preview: `API-CR-001-Endpoints.docx
 ─────────────────────────────────────────
@@ -324,7 +324,7 @@ Each endpoint includes:
     desc: 'Схема потоків даних між системами: booking service, payment gateway, KEP provider, notifications.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1oFN2NT7An0zuhdHZ3JKv0Hq8nTL0Cg34/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'API-CR-002-DataFlow.docx',
     preview: `API-CR-002-DataFlow.docx
 ─────────────────────────────────────────
@@ -365,7 +365,7 @@ Data stored: booking_id, payment_ref,
     desc: 'Вимоги для інтеграції кваліфікованого електронного підпису. Scope, технічні обмеження, AC, compliance.',
     domain: '🚛 Logistics / ЕДО',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1JK6kidd816hz0-pLuV3JldmK1mHywxK4/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'API-CR-003-ESign.docx',
     preview: `API-CR-003-ESign.docx
 ─────────────────────────────────────────
@@ -404,7 +404,7 @@ Acceptance Criteria:
     desc: 'Повний backlog: 14 епіків, 74 stories, MoSCoW + WSJF scoring, Sprint 1 scope, dependency mapping.',
     domain: '🚗 Car Rental Platform',
     format: 'XLSX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/spreadsheets/d/1gt-PxpnCajzAgGx5PozTFZ3XPPoluyFM/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'CarRental-Backlog.xlsx',
     preview: `CarRental-Backlog.xlsx  (v1.3 · 74 stories)
 ─────────────────────────────────────────
@@ -433,7 +433,7 @@ Rationale: foundational dependency block`,
     desc: 'Повний PRD для Promo Code фічі: problem statement, scope, user stories, technical requirements, metrics.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1tMXJVJKf6-8RSppzZ2Yf6FH-6CvVRML6/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'PRD-CR-020-ProductRequirements.docx',
     preview: `PRD-CR-020-ProductRequirements.docx
 ─────────────────────────────────────────
@@ -470,7 +470,7 @@ Success Metrics:
     desc: '1-сторінковий brief для Promo Code. Ціль, scope, out of scope, open questions. Швидкий старт для команди.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1Y5-f7xV4Koz44cVQkF6D_PWCf1uSHhzY/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'FB-CR-020-FeatureBrief.docx',
     preview: `FB-CR-020-FeatureBrief.docx  (1 page)
 ─────────────────────────────────────────
@@ -507,7 +507,7 @@ OPEN QUESTIONS:
     desc: 'Формат Now/Next/Later для команди і стейкхолдерів. Без дат — фокус на пріоритетах, не дедлайнах.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1HBvoC5mk89kJVTSQYZnn5SjtTFYpxZIh/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'RM-CR-001-NowNextLater.docx',
     preview: `RM-CR-001-NowNextLater.docx
 ─────────────────────────────────────────
@@ -544,7 +544,7 @@ Principles used:
     desc: 'Квартальний timeline з milestones і delivery goals. Для investor updates і executive presentations.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1l8FvIsv6br-cAMx_-zHHSjCLAu8OFKzd/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'RM-CR-002-Timeline.docx',
     preview: `RM-CR-002-Timeline.docx
 ─────────────────────────────────────────
@@ -579,7 +579,7 @@ Risk buffer: 1 sprint per quarter.`,
     desc: 'Goal-based стратегічний roadmap. 4 теми замість списку фіч. Для board-level і investor communications.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1BuL9jAV7ezOwHT9tdo6CX6EWR2fDCOXo/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'RM-CR-003-StrategicRoadmap.docx',
     preview: `RM-CR-003-StrategicRoadmap.docx
 ─────────────────────────────────────────
@@ -620,7 +620,7 @@ THEME 4: "Scale"  (Q4+)
     desc: 'Структурований аналіз болей з 12 інтерв\'ю: кластеризація, частота, severity score.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1BHdEYLHqa308GRvSBQPh06H2hkf8jZrA/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'DS-CR-001-PainClusters.docx',
     preview: `DS-CR-001-PainClusters.docx
 ─────────────────────────────────────────
@@ -657,7 +657,7 @@ Severity scoring: Frequency × Business Impact
     desc: 'JTBD карта: job statement, functional / emotional / social dimensions, barriers, success criteria.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1FCm89oLTxRgmY0OvicChsQ9H2uJjdmQv/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'DS-CR-002-JTBD.docx',
     preview: `DS-CR-002-JTBD.docx
 ─────────────────────────────────────────
@@ -697,7 +697,7 @@ I can prevent double-bookings and downtime."
     desc: '2×2 матриця для пріоритизації фіч після Discovery. 16 ідей розміщено по квадрантам з rationale.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1x1vfCyz5icizQURF2X37yfpAq6UgA6j-/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'DS-CR-003-ImpactEffort.docx',
     preview: `DS-CR-003-ImpactEffort.docx
 ─────────────────────────────────────────
@@ -731,7 +731,7 @@ pain cluster severity scores, WSJF backlog`,
     desc: 'Зведений звіт по Discovery фазі: методологія, ключові інсайти, opportunity areas, recommended next steps.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1YoBeLmgAtr-_8K38QQyZHVIGsAJgv48w/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'DS-CR-001-DiscoverySynthesis.docx',
     preview: `DS-CR-001-DiscoverySynthesis.docx
 ─────────────────────────────────────────
@@ -771,7 +771,7 @@ Confidence level: High (12 interviews,
     desc: 'Структурований гайд для 45-хв інтерв\'ю: intro, question blocks, probes, closing. Для 2 фасилітаторів.',
     domain: '🔧 Universal',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1Ri9DoOEupyjQdlDaV_4_a-AN-8267Q_B/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'DIG-CR-001-InterviewGuide.docx',
     preview: `DIG-CR-001-InterviewGuide.docx  (45 min)
 ─────────────────────────────────────────
@@ -811,7 +811,7 @@ Avoid leading questions. Embrace silence.`,
     desc: '3 персони: Urban Renter, Business Traveler, Weekend Explorer. Goals, frustrations, behaviours, quote.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1Oo9bjQ7kTUb_KUTgKLtAa_BNaiRwVw46/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'PC-CR-001-PersonaCards.docx',
     preview: `PC-CR-001-PersonaCards.docx  (3 personas)
 ─────────────────────────────────────────
@@ -850,7 +850,7 @@ PERSONA 3: Weekend Explorer
     desc: '12 слайдів: goals, RACI, scope, constraints, timeline, risks, communication plan, DoD. З decision log.',
     domain: '🔧 Universal',
     format: 'PPTX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/presentation/d/1_uH5uupVLHsC-iqWdMrDhmBrp2bgBTAV/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'KO-CR-002-Kickoff-Full.pptx',
     preview: `KO-CR-002-Kickoff-Full.pptx  (12 slides)
 ─────────────────────────────────────────
@@ -884,7 +884,7 @@ Usage: projects > 3 months, 5+ stakeholders`,
     desc: 'Dev-орієнтований changelog: feat/fix/perf/deps з breaking changes і migration guide. Semver-ready.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1C8zW5VVCahdJvSHNcTmWolZ_SIb2cFN7/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'RN-CR-001-Technical-Changelog.docx',
     preview: `RN-CR-001-Technical-Changelog.docx
 ─────────────────────────────────────────
@@ -917,7 +917,7 @@ Rollback plan:  ops/rollback-v1.2.sh`,
     desc: 'Бізнес-орієнтовані release notes: без технічного жаргону, з emoji, для клієнтів і стейкхолдерів.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1l10ARoELGb4yymw3KFTiOVwkmddudO3O/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'RN-CR-002-Business-ReleaseNotes.docx',
     preview: `RN-CR-002-Business-ReleaseNotes.docx
 ─────────────────────────────────────────
@@ -957,7 +957,7 @@ Questions? support@carrental.app`,
     desc: 'Реальний CR на прикладі Promo Code фічі: impact assessment, scope/timeline/budget зміни, sign-off.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1gl7VdMVBBKptQnwotBN-YSoAg1LivqA_/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'CR-001-Example-PromoCode.docx',
     preview: `CR-001-Example-PromoCode.docx
 ─────────────────────────────────────────
@@ -997,7 +997,7 @@ Date: 2026-01-19`,
     desc: '3-сторінковий proposal: problem understanding, proposed approach, team, timeline, investment range.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1JzEn8A-GuKWrgx92Oympud_hogzZo17z/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'PP-CR-001-ProjectProposal.docx',
     preview: `PP-CR-001-ProjectProposal.docx  (3 pages)
 ─────────────────────────────────────────
@@ -1038,7 +1038,7 @@ Date: 2026-01-19`,
     desc: 'Детальна оцінка по епіках: story points, людино-дні, rate, cost. З буфером і assumptions.',
     domain: '🚗 Car Rental Platform',
     format: 'XLSX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/spreadsheets/d/1Qw8M2WjGfdckmSQ4W-OKl3-prw8XOyjA/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'EST-CR-001-EstimationSheet.xlsx',
     preview: `EST-CR-001-EstimationSheet.xlsx
 ─────────────────────────────────────────
@@ -1071,7 +1071,7 @@ Assumptions:
     desc: 'Груба оцінка фіч на рівні XS/S/M/L/XL для early-stage discovery. Для швидкого scope alignment.',
     domain: '🚗 Car Rental Platform',
     format: 'XLSX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/spreadsheets/d/12Mm8ricc0PzjfZUqBFUj7uCppWBXvNlI/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'TSM-CR-001-TshirtSizing.xlsx',
     preview: `TSM-CR-001-TshirtSizing.xlsx
 ─────────────────────────────────────────
@@ -1103,7 +1103,7 @@ detailed estimation is possible`,
     desc: 'Юридично-орієнтований документ: scope, deliverables, timeline, payment milestones, exclusions, IP rights.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1QtuclkVArX5n8CYPWaIYpX_h6Zl6U1Rq/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'SOW-CR-001-StatementOfWork.docx',
     preview: `SOW-CR-001-StatementOfWork.docx
 ─────────────────────────────────────────
@@ -1146,7 +1146,7 @@ IP: Full ownership transfers to Client
     desc: 'Порівняльна таблиця 5 конкурентів: функціонал, UX, монетизація, ринкова позиція. Opportunity gaps.',
     domain: '🚗 Car Rental Platform',
     format: 'XLSX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/spreadsheets/d/1NYh9bRjgb3vhUFqZsZbJBOzmB5WZ9qWv/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'CA-CR-001-CompetitiveAnalysis.xlsx',
     preview: `CA-CR-001-CompetitiveAnalysis.xlsx
 ─────────────────────────────────────────
@@ -1177,7 +1177,7 @@ Pricing model comparison included.`,
     desc: '1-сторінковий executive summary: проблема → рішення → ключові фічі → tech stack → очікувані метрики.',
     domain: '🚗 Car Rental Platform',
     format: 'DOCX',
-    driveUrl: null,
+    driveUrl: 'https://docs.google.com/document/d/1Kl6a3CxJ_K507Cp6HiN-mwN8X9Bv4Ohc/edit?usp=drive_link&ouid=100075542947564825063&rtpof=true&sd=true',
     filename: 'HLSO-CR-001-HighLevelSolutionOverview.docx',
     preview: `HLSO-CR-001-HighLevelSolutionOverview.docx
 ─────────────────────────────────────────
