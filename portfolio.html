@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artifacts Portfolio — Taras Smaliukh</title>
+  <meta name="description" content="BA/PO artifacts portfolio — user stories, BPMN processes, PRDs, discovery research. Anonymised real-project documents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav__name" href="index.html">Taras Smaliukh</a>
+  <div class="nav__links" id="navLinks">
+    <a href="index.html#services" class="i18n" data-en="Services" data-uk="Послуги">Services</a>
+    <a href="index.html#cases" class="i18n" data-en="Cases" data-uk="Кейси">Cases</a>
+    <a href="index.html#timeline" class="i18n" data-en="Experience" data-uk="Досвід">Experience</a>
+    <a href="portfolio.html" class="nav__portfolio-active">Portfolio</a>
+    <a href="index.html#contact" class="nav__cta i18n" data-en="Contact me" data-uk="Зв'язатись">Contact me</a>
+  </div>
+  <div class="nav__right">
+    <button class="lang-btn" id="langBtn" aria-label="Switch language">UA</button>
+    <button class="nav__burger" aria-label="Menu" id="navBurger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="pf-page-header">
+  <div class="container">
+    <span class="label fade-up i18n" data-en="BA / PO artifacts" data-uk="Артефакти BA / PO">BA / PO artifacts</span>
+    <h1 class="pf-title fade-up">
+      Portfolio<span class="pf-title-dot">.</span>
+    </h1>
+    <p class="pf-subtitle fade-up i18n"
+       data-en="Anonymised artifacts from real projects — requirements, processes, product documents. Each one reflects concrete work, not theory."
+       data-uk="Анонімізовані артефакти з реальних проектів — вимоги, процеси, продуктові документи. Кожен — конкретна робота, не теорія.">
+      Anonymised artifacts from real projects — requirements, processes, product documents. Each one reflects concrete work, not theory.
+    </p>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="pf-filters-bar">
+  <div class="container">
+    <div class="pf-filters" id="pfFilters"></div>
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="pf-section">
+  <div class="container">
+    <div class="pf-grid" id="pfGrid"></div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="pf-overlay" id="pfOverlay" role="dialog" aria-modal="true">
+  <div class="pf-modal" id="pfModal">
+    <div class="pf-modal__header">
+      <div>
+        <span class="pf-modal__meta" id="pfModalMeta"></span>
+        <h2 class="pf-modal__title" id="pfModalTitle"></h2>
+      </div>
+      <button class="pf-modal__close" id="pfModalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="pf-modal__body">
+      <div class="pf-preview" id="pfPreview"></div>
+    </div>
+  </div>
+</div>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
