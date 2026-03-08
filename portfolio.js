@@ -1711,10 +1711,13 @@ function renderCards() {
       <p class="pf-card__desc">${item.desc}</p>
       <div class="pf-card__footer">
         <span class="pf-card__domain">${item.domain}</span>
-        <span class="pf-card__cta" style="color:${item.color}">Preview →</span>
+        <span class="pf-card__cta" style="color:${item.color}">${item.driveUrl ? 'Open →' : 'Request →'}</span>
       </div>
     `;
-    card.addEventListener('click', () => openModal(item));
+    card.addEventListener('click', () => {
+      if (item.driveUrl) window.open(item.driveUrl, '_blank', 'noopener');
+      else openModal(item);
+    });
     grid.appendChild(card);
   });
   document.querySelectorAll('.pf-card.fade-up').forEach(el => io.observe(el));
@@ -1734,24 +1737,8 @@ function openModal(item) {
   modalMeta.textContent = `${item.category} · ${item.domain}`;
   modalMeta.style.color = item.color;
   modalTitle.textContent = item.title;
-  const embedUrl = getEmbedUrl(item.driveUrl);
-  if (embedUrl) {
-    preview.innerHTML = `<iframe src="${embedUrl}" class="pf-iframe" allowfullscreen loading="lazy"></iframe>`;
-  } else {
-    preview.innerHTML = `<pre>${escapeHtml(item.preview)}</pre>`;
-  }
-
-  if (item.driveUrl) {
-    const isCanva = item.driveUrl.includes('canva.com');
-    modalFooter.innerHTML = `
-      <a href="${item.driveUrl}" target="_blank" rel="noopener"
-         class="pf-btn-drive" style="background:${item.color}">
-        ${isCanva ? 'Open in Canva →' : 'Open in Google Drive →'}
-      </a>`;
-  } else {
-    modalFooter.innerHTML = `<p class="pf-no-link">Available on request · <a href="index.html#contact">Contact me</a></p>`;
-  }
-
+  preview.innerHTML = `<pre>${escapeHtml(item.preview)}</pre>`;
+  modalFooter.innerHTML = `<p class="pf-no-link">Available on request · <a href="index.html#contact">Contact me</a></p>`;
   overlay.classList.add('is-open');
   document.body.style.overflow = 'hidden';
 }
@@ -1761,12 +1748,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-function getEmbedUrl(driveUrl) {
-  if (!driveUrl) return null;
-  const m = driveUrl.match(/https:\/\/docs\.google\.com\/(document|spreadsheets|presentation)\/d\/([^\/]+)\//);
-  if (m) return `https://docs.google.com/${m[1]}/d/${m[2]}/preview`;
-  return null;
-}
 
 function escapeHtml(str) {
   return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
