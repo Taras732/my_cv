@@ -152,8 +152,6 @@ contactForm.addEventListener('submit', async function (e) {
   // — loading state —
   submitBtn.disabled = true;
   submitBtn.querySelector('.btn-label').textContent = currentLang === 'uk' ? 'Надсилаємо…' : 'Sending…';
-  formStatus.className   = 'form-status';
-  formStatus.textContent = '';
 
   try {
     const res = await fetch('https://api.web3forms.com/submit', {
@@ -171,19 +169,23 @@ contactForm.addEventListener('submit', async function (e) {
     const data = await res.json();
 
     if (data.success) {
-      formStatus.className   = 'form-status form-status--ok';
-      formStatus.textContent = currentLang === 'uk'
-        ? '✓ Повідомлення надіслано! Відповім найближчим часом.'
-        : '✓ Message sent! I\'ll get back to you soon.';
       this.reset();
+      showToast(
+        currentLang === 'uk'
+          ? '✓ Повідомлення надіслано! Відповім найближчим часом.'
+          : '✓ Message sent! I\'ll get back to you soon.',
+        'success'
+      );
     } else {
       throw new Error(data.message || 'Error');
     }
   } catch {
-    formStatus.className   = 'form-status form-status--err';
-    formStatus.textContent = currentLang === 'uk'
-      ? 'Щось пішло не так. Напишіть на taras.smalych@gmail.com'
-      : 'Something went wrong. Email me at taras.smalych@gmail.com';
+    showToast(
+      currentLang === 'uk'
+        ? 'Щось пішло не так. Напишіть на taras.smalych@gmail.com'
+        : 'Something went wrong. Email me at taras.smalych@gmail.com',
+      'err'
+    );
   } finally {
     submitBtn.disabled = false;
     submitBtn.querySelector('.btn-label').textContent = currentLang === 'uk' ? 'Надіслати' : 'Send message';
